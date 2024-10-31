@@ -26,11 +26,10 @@ pipeline {
 
         stage('Tests') {
             parallel {
-                stage('Unit tests') {
+                stage('Unit testsssssssssssssssssssssss') {
                     agent {
                         docker {
                             image 'node:18-alpine'
-                            node --version
                             reuseNode true
                         }
                     }
@@ -38,6 +37,7 @@ pipeline {
                     steps {
                         sh '''
                             #test -f build/index.html
+                            node --version
                             npm test
                         '''
                     }
