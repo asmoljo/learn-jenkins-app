@@ -30,6 +30,7 @@ pipeline {
                     agent {
                         docker {
                             image 'node:18-alpine'
+                            node --version
                             reuseNode true
                         }
                     }
